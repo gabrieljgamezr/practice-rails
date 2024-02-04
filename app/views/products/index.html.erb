@@ -1,0 +1,17 @@
+<h2>Products:</h2>
+
+<% @products.each do |product| %>
+    <div style="padding: 5px">
+        <span style="font-weight: bold;">
+            <%= product.title %> |
+        </span>
+        <span>
+            $<%= product.price %>
+        </span>
+        <div>
+            <%= link_to product_path(product.id) do %>
+                See more...
+            <% end %>
+        </div>
+    </div>
+<% end %>
