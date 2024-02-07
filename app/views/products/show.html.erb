@@ -9,3 +9,7 @@
 <div class="price">
     Price: <%= @product.price %>
 </div>
+
+<div class="edit">
+    <%= link_to 'Edit Product', edit_product_path(@product.id)%>
+</div>

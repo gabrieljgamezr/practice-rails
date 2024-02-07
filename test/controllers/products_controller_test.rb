@@ -48,4 +48,34 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :unprocessable_entity
   end
+
+  test 'render an edit product form' do
+    get edit_product_path(products(:one))
+
+    assert_response :success
+    assert_select 'form'
+  end
+
+  test 'allow to update a product' do
+    patch product_path(products(:one)), params: {
+      product: {
+        price: 100
+      }
+    }
+
+    assert_redirected_to products_path
+    assert_equal flash[:notice], 'Successful operation'
+  end
+
+  test 'does not allow to update a product with empty fields' do
+    patch product_path(products(:one)), params: {
+      product: {
+        title: '',
+        description: 'Is a Nintendo 64',
+        price: 200
+      }
+    }
+
+    assert_response :unprocessable_entity
+  end
 end
