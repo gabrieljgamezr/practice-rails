@@ -9,7 +9,12 @@
 <div class="price">
     Price: <%= @product.price %>
 </div>
-
 <div class="edit">
     <%= link_to 'Edit Product', edit_product_path(@product.id)%>
+</div>
+<div class="delete">
+    <%= link_to 'Delete Product', product_path(@product.id), data: {
+        turbo_method: :delete,
+        turbo_confirm: 'Are you sure you want to delete this product?'
+    }%>
 </div>
