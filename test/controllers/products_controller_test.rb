@@ -34,7 +34,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     }
 
     assert_redirected_to products_path
-    assert_equal flash[:notice], 'Successful operation'
+    assert_equal flash[:notice], 'Successfully created product'
   end
 
   test 'does not allow to create a new product with empty fields' do
@@ -64,7 +64,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     }
 
     assert_redirected_to products_path
-    assert_equal flash[:notice], 'Successful operation'
+    assert_equal flash[:notice], 'Successfully updated product'
   end
 
   test 'does not allow to update a product with empty fields' do
@@ -85,6 +85,6 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to products_path
-    assert_equal flash[:notice], 'Successful operation'
+    assert_equal flash[:notice], 'Successfully destroyed product'
   end
 end
