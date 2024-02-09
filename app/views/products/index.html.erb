@@ -5,6 +5,9 @@
         class="product" 
         style="padding: 5px"
     >
+        <div class="photo">
+            <%= image_tag product.photo, width: 100 if product.photo.attached? %>
+        </div>
         <span style="font-weight: bold;">
             <%= product.title %> |
         </span>

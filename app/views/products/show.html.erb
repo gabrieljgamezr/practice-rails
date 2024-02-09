@@ -1,5 +1,9 @@
 <h2>Product details:</h2>
 
+<div class="photo">
+    <%= image_tag @product.photo, width: 200 if @product.photo.attached? %>
+</div>
+
 <div class="title">
     Title: <%= @product.title %>
 </div>
