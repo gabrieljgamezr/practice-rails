@@ -1,0 +1,43 @@
+es:
+  hello: "Hola mundo"
+  activerecord:
+    models:
+      product: 'Producto'
+    attributes:
+      product:
+        title: 'Título'
+        description: 'Descripción'
+        price: 'Precio'
+        photo: 'Foto'
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: 'no puede estar vacío'
+            description:
+              blank: 'no puede estar vacío'
+            price:
+              blank: 'no puede estar vacío'
+  common:
+    field:
+      see_more: 'Ver más...'
+    confirm:
+      delete: '¿Estás seguro de que quieres eliminarlo?'
+  products:
+    index:
+      title: 'Lista de productos'
+    show:
+      title: 'Detalles del producto'
+    edit:
+      title: 'Editar producto'
+    update:
+      updated: 'Producto editado exitosamente'
+    new:
+      title: 'Añadir producto'
+    create:
+      created: 'Producto creado exitosamente'
+    delete:
+      title: 'Eliminar producto'
+    destroy:
+      destroyed: 'Producto eliminado exitosamente'
