@@ -2,8 +2,10 @@ one:
   title: PS4
   description: Is a PS4
   price: 400
+  category: videogames
 
 two:
   title: Laptop Lenovo
   description: Is a laptop
   price: 200
+  category: electronic

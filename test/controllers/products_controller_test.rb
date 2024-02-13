@@ -29,7 +29,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       product: {
         title: 'Nintendo 64',
         description: 'Is a Nintendo 64',
-        price: 200
+        price: 200,
+        category_id: categories(:videogames).id
       }
     }
 
@@ -72,7 +73,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       product: {
         title: '',
         description: 'Is a Nintendo 64',
-        price: 200
+        price: 200,
       }
     }
 

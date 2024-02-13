@@ -3,12 +3,16 @@ en:
   activerecord:
     models:
       product: 'Product'
+      category: 'Category'
     attributes:
       product:
         title: 'Title'
         description: 'Description'
         price: 'Price'
         photo: 'Photo'
+        category: 'Category'
+      category:
+        name: 'Name'
     errors:
       models:
         product:
@@ -19,12 +23,22 @@ en:
               blank: "can't be empty"
             price:
               blank: "can't be empty"
+            category:
+              blank: "can't be empty"
+        category:
+          attributes:
+            name:
+              blank: "can't be empty"
   common:
-    field:
+    action:
       see_more: 'See more...'
+      go_back: 'Go back'
     confirm:
       delete: 'Are you sure you want to delete it?'
   products:
+    product:
+      edit: 'Edit'
+      delete: 'Delete'
     index:
       title: 'Products list'
     show:
@@ -41,3 +55,21 @@ en:
       title: 'Delete product'
     destroy:
       destroyed: 'Successfully destroyed product'
+  categories:
+    category:
+      edit: 'Edit'
+      delete: 'Delete'
+    index:
+      title: 'Categories list'
+    new:
+      title: 'Add category'
+    create:
+      created: 'Successfully created category'
+    edit:
+      title: 'Edit category'
+    update:
+      updated: 'Successfully updated category'
+    delete:
+      title: 'Delete category'
+    destroy:
+      destroyed: 'Successfully destroyed category'

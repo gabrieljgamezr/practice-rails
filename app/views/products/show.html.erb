@@ -1,4 +1,10 @@
-<h2><%=t('.title')%></h2>
+<h2>
+    <%=t('.title')%>
+    |
+    <span>
+        <%= link_to t('common.action.go_back'), products_path %>
+    </span>
+</h2>
 
 <div class="photo">
     <%= image_tag @product.photo, width: 200 if @product.photo.attached? %>

@@ -1,0 +1,7 @@
+<h2><%= t('.title') %></h2>
+
+<div>
+    <%= link_to t('common.action.go_back'), categories_path %>
+</div>
+
+<%= render "form", category: @category %>

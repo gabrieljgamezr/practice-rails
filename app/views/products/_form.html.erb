@@ -1,7 +1,7 @@
 <%= form_with model: @product do |form| %>
 
     <% @product.errors.full_messages.each do |error| %>
-        <div>
+        <div style="color: red;">
             <%= error %>
         </div>
     <% end %>
@@ -19,6 +19,16 @@
     <div>
         <%= form.label :price %>
         <%= form.number_field :price %>
+    </div>
+
+    <div>
+        <%= form.label :category %>
+        <%=
+            form.collection_select :category_id,
+            Category.all.order(name: :asc),
+            :id,
+            :name
+        %>
     </div>
 
     <div>

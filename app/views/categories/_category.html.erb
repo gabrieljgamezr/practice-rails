@@ -1,0 +1,19 @@
+<div
+  class="category" 
+  style="padding: 5px"
+>
+  <div class="name">
+    <%= category.name %>
+  </div>
+
+  <div class="edit">
+    <%= link_to t(".edit"), edit_category_path(category) %>
+  </div>
+
+  <div class="delete">
+    <%= link_to t(".delete"), category_path(category), data: {
+      turbo_method: :delete,
+      turbo_confirm: t('common.confirm.delete')
+    }%>
+  </div>
+</div>

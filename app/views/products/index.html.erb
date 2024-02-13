@@ -1,3 +1,9 @@
-<h2><%=t('.title')%></h2>
+<h2>
+    <%=t('.title')%>
+    |
+    <span>
+        <%= link_to t('products.new.title'), new_product_path %>
+    </span>
+</h2>
 
 <%= render partial: 'product', collection: @products %>

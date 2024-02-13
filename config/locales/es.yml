@@ -3,12 +3,16 @@ es:
   activerecord:
     models:
       product: 'Producto'
+      category: 'Categoría'
     attributes:
       product:
         title: 'Título'
         description: 'Descripción'
         price: 'Precio'
         photo: 'Foto'
+        category: 'Categoría'
+      category:
+        name: 'Nombre'
     errors:
       models:
         product:
@@ -19,12 +23,22 @@ es:
               blank: 'no puede estar vacío'
             price:
               blank: 'no puede estar vacío'
+            category:
+              blank: 'no puede estar vacío'
+        category:
+          attributes:
+            name:
+              blank: 'no puede estar vacío'
   common:
-    field:
+    action:
       see_more: 'Ver más...'
+      go_back: 'Regresar'
     confirm:
       delete: '¿Estás seguro de que quieres eliminarlo?'
   products:
+    product:
+      edit: 'Editar'
+      delete: 'Eliminar'
     index:
       title: 'Lista de productos'
     show:
@@ -41,3 +55,21 @@ es:
       title: 'Eliminar producto'
     destroy:
       destroyed: 'Producto eliminado exitosamente'
+  categories:
+    category:
+      edit: 'Editar'
+      delete: 'Eliminar'
+    index:
+      title: 'Lista de categorías'
+    new:
+      title: 'Añadir categoría'
+    create:
+      created: 'Categoría creada exitosamente'
+    edit:
+      title: 'Editar categoría'
+    update:
+      updated: 'Categoría editada exitosamente'
+    delete:
+      title: 'Eliminar categoría'
+    destroy:
+      destroyed: 'Categoría eliminada exitosamente'
