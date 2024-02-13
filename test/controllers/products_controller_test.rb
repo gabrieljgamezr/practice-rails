@@ -16,6 +16,14 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_select '.product', 1
   end
 
+  test 'render a list of products filtered by min_price and max_price' do
+    get products_path(min_price: 100, max_price: 300)
+
+    assert_response :success
+    assert_select '.product', 1
+    assert_select '.title', 'Laptop Lenovo |'
+  end
+
   test 'render a detailed product page' do
     get product_path(products(:one))
 
