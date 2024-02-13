@@ -44,6 +44,7 @@ en:
       all: 'All'
       min_price: 'Minimal price'
       max_price: 'Maximum price'
+      search: 'Search product'
     show:
       title: 'Product details'
     edit:
