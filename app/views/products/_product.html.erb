@@ -1,5 +1,5 @@
 <div
-    class="product" 
+    class="product"
     style="padding: 5px"
 >
     <div class="photo">
@@ -12,6 +12,10 @@
         $<%= product.price %>
     </span>
     <div>
-        <%= link_to t('common.action.see_more'), product_path(product.id) %>
+        <%=
+            link_to t('common.action.see_more'),
+            product_path(product.id),
+            'data-turbo-frame': '_top'
+        %>
     </div>
 </div>

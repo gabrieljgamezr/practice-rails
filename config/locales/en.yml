@@ -41,6 +41,7 @@ en:
       delete: 'Delete'
     index:
       title: 'Products list'
+      all: 'All'
     show:
       title: 'Product details'
     edit:

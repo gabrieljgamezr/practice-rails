@@ -41,6 +41,7 @@ es:
       delete: 'Eliminar'
     index:
       title: 'Lista de productos'
+      all: 'Todos'
     show:
       title: 'Detalles del producto'
     edit:

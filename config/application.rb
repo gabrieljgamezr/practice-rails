@@ -29,5 +29,8 @@ module MarketApp
 
     #available languages
     config.i18n.default_locale = :en
+
+    # Allow multiquery
+    config.active_record.async_query_executor = :global_thread_pool
   end
 end
