@@ -45,6 +45,10 @@ en:
       min_price: 'Minimal price'
       max_price: 'Maximum price'
       search: 'Search product'
+      newest: 'Newest'
+      older: 'Older'
+      expensive: 'Expensive'
+      cheapest: 'cheapest'
     show:
       title: 'Product details'
     edit:
