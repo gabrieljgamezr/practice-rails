@@ -44,6 +44,9 @@ gem "bootsnap", require: false
 # Postgresql fulltextsearch
 gem "pg_search", "~> 2.3"
 
+# Pagination
+gem "pagy", "~> 6.4"
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 

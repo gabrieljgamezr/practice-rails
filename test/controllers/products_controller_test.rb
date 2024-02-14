@@ -5,23 +5,23 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path
 
     assert_response :success
-    assert_select '.product', 2
-    assert_select '.category', 3
+    assert_select '.product', 12
+    assert_select '.category', 9
   end
 
   test 'render a list of products filtered by category' do
     get products_path(category_id: categories(:videogames).id)
 
     assert_response :success
-    assert_select '.product', 1
+    assert_select '.product', 7
   end
 
   test 'render a list of products filtered by min_price and max_price' do
     get products_path(min_price: 100, max_price: 300)
 
     assert_response :success
-    assert_select '.product', 1
-    assert_select '.title', 'Laptop Lenovo |'
+    assert_select '.product', 9
+    assert_select '.title', 'Game Boy Color |'
   end
 
   test 'search a products by query_text' do
@@ -29,32 +29,32 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_select '.product', 1
-    assert_select '.title', 'PS4 |'
+    assert_select '.title', 'PS4 Fat |'
   end
 
   test 'sort products by expensive prices first' do
     get products_path(order_by: 'expensive')
 
     assert_response :success
-    assert_select '.product', 2
-    assert_select '.products .product:first-child .title', 'PS4 |'
+    assert_select '.product', 12
+    assert_select '.products .product:first-child .title', 'Seat Panda clásico |'
   end
 
   test 'sort products by cheapest prices first' do
     get products_path(order_by: 'cheapest')
 
     assert_response :success
-    assert_select '.product', 2
-    assert_select '.products .product:first-child .title', 'Laptop Lenovo |'
+    assert_select '.product', 12
+    assert_select '.products .product:first-child .title', 'El hobbit |'
   end
 
   test 'render a detailed product page' do
-    get product_path(products(:one))
+    get product_path(products(:ps4))
 
     assert_response :success
-    assert_select '.title', 'Title: PS4'
-    assert_select '.description', 'Description: Is a PS4'
-    assert_select '.price', 'Price: 400'
+    assert_select '.title', 'Title: PS4 Fat'
+    assert_select '.description', 'Description: PS4 en buen estado'
+    assert_select '.price', 'Price: 150'
   end
 
   test 'render a new product form' do
@@ -91,14 +91,14 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'render an edit product form' do
-    get edit_product_path(products(:one))
+    get edit_product_path(products(:ps4))
 
     assert_response :success
     assert_select 'form'
   end
 
   test 'allow to update a product' do
-    patch product_path(products(:one)), params: {
+    patch product_path(products(:ps4)), params: {
       product: {
         price: 100
       }
@@ -109,7 +109,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'does not allow to update a product with empty fields' do
-    patch product_path(products(:one)), params: {
+    patch product_path(products(:ps4)), params: {
       product: {
         title: '',
         description: 'Is a Nintendo 64',
@@ -122,7 +122,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
   test 'can delete products' do
     assert_difference('Product.count', -1) do
-      delete product_path(products(:one))
+      delete product_path(products(:ps4))
     end
 
     assert_redirected_to products_path
