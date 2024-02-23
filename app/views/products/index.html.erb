@@ -1,11 +1,11 @@
+<h2>
+    <%=t('.title')%>
+    |
+    <span>
+        <%= link_to t('products.new.title'), new_product_path %>
+    </span>
+</h2>
 <%= turbo_frame_tag 'home' do %>
-    <h2>
-        <%=t('.title')%>
-        |
-        <span>
-            <%= link_to t('products.new.title'), new_product_path %>
-        </span>
-    </h2>
 
     <%= form_with url: products_path, method: :get do |form| %>
         <%=
