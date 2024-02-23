@@ -1,5 +1,7 @@
 es:
   hello: "Hola mundo"
+  app_name: 'MarketApp'
+  meta_title: 'Compra y venta de productos'
   activerecord:
     models:
       product: 'Producto'
