@@ -15,6 +15,10 @@ en:
         category: 'Category'
       category:
         name: 'Name'
+      user:
+        email: 'Email'
+        username: 'Username'
+        password: 'Password'
     errors:
       models:
         product:
@@ -31,6 +35,21 @@ en:
           attributes:
             name:
               blank: "can't be empty"
+        user:
+          attributes:
+            email:
+              blank: "can't be empty"
+              invalid: 'does not have a valid format'
+              taken: 'taken'
+            username:
+              blank: "can't be empty"
+              too_short: "can't be less than 3 characters"
+              too_long: "can't be more than 15 characters"
+              invalid: 'does not have a valid format'
+              taken: 'taken'
+            password:
+              blank: "can't be empty"
+              too_short: "can't be less than 6 characters"
   common:
     action:
       see_more: 'See more...'
@@ -83,3 +102,9 @@ en:
       title: 'Delete category'
     destroy:
       destroyed: 'Successfully destroyed category'
+  authentication:
+    users:
+      new:
+        title: 'Add user'
+      create:
+        created: 'Successfully created user'

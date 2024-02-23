@@ -15,6 +15,10 @@ es:
         category: 'Categoría'
       category:
         name: 'Nombre'
+      user:
+        email: 'Correo electrónico'
+        username: 'Nombre de usuario'
+        password: 'Contraseña'
     errors:
       models:
         product:
@@ -31,6 +35,21 @@ es:
           attributes:
             name:
               blank: 'no puede estar vacío'
+        user:
+          attributes:
+            email:
+              blank: 'no puede estar vacío'
+              invalid: 'no tiene un formato válido'
+              taken: 'ocupado'
+            username:
+              blank: 'no puede estar vacío'
+              too_short: 'no puede tener menos de 3 caracteres'
+              too_long: "no puede tener más de 15 caracteres"
+              invalid: 'no tiene un formato válido'
+              taken: 'ocupado'
+            password:
+              blank: 'no puede estar vacío'
+              too_short: 'no puede tener menos de 6 caracteres'
   common:
     action:
       see_more: 'Ver más...'
@@ -83,3 +102,9 @@ es:
       title: 'Eliminar categoría'
     destroy:
       destroyed: 'Categoría eliminada exitosamente'
+  authentication:
+    users:
+      new:
+        title: 'Añadir usuario'
+      create:
+        created: 'Usuario creado exitosamente'
