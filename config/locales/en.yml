@@ -108,3 +108,7 @@ en:
         title: 'Add user'
       create:
         created: 'Successfully created user'
+    sessions:
+      create:
+        created: 'Welcome!'
+        failed: 'Invalid login!'

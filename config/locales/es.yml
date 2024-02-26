@@ -106,5 +106,7 @@ es:
     users:
       new:
         title: 'Añadir usuario'
+    sessions:
       create:
-        created: 'Usuario creado exitosamente'
+        created: '¡Bienvenido!'
+        failed: 'Login inválido'
