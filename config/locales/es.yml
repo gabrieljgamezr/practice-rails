@@ -56,6 +56,8 @@ es:
       go_back: 'Regresar'
     confirm:
       delete: '¿Estás seguro de que quieres eliminarlo?'
+    alert:
+      not_logged_in: 'Tienes que iniciar sesión o crear una cuenta.'
   products:
     product:
       edit: 'Editar'
