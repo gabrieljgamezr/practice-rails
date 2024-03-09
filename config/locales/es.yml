@@ -31,6 +31,8 @@ es:
               blank: 'no puede estar vacío'
             category:
               blank: 'no puede estar vacío'
+            user:
+              required: 'es requerido'
         category:
           attributes:
             name:

@@ -31,6 +31,8 @@ en:
               blank: "can't be empty"
             category:
               blank: "can't be empty"
+            user:
+              required: "is required"
         category:
           attributes:
             name:

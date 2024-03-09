@@ -15,6 +15,8 @@ class ProductsController < ApplicationController
     end
 
     def create
+        # @product = Current.user.products.new(product_params)
+
         @product = Product.new(product_params)
 
         if @product.save
