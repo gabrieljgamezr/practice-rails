@@ -20,11 +20,18 @@
     <%= t("activerecord.attributes.product.price") %>: <%= @product.price %>
 </div>
 <div class="edit">
-    <%= link_to t("products.edit.title"), edit_product_path(@product.id)%>
+    <%=
+        link_to t("products.edit.title"),
+        edit_product_path(@product.id) if @product.user == Current.user
+    %>
 </div>
 <div class="delete">
-    <%= link_to t("products.delete.title"), product_path(@product.id), data: {
-        turbo_method: :delete,
-        turbo_confirm: t('common.confirm.delete')
-    }%>
+    <%=
+        link_to t("products.delete.title"),
+        product_path(@product.id),
+        data: {
+            turbo_method: :delete,
+            turbo_confirm: t('common.confirm.delete')
+        } if @product.user == Current.user
+    %>
 </div>

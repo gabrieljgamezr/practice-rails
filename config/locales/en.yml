@@ -6,6 +6,7 @@ en:
     models:
       product: 'Product'
       category: 'Category'
+      User: 'User'
     attributes:
       product:
         title: 'Title'
@@ -19,47 +20,22 @@ en:
         email: 'Email'
         username: 'Username'
         password: 'Password'
-    errors:
-      models:
-        product:
-          attributes:
-            title:
-              blank: "can't be empty"
-            description:
-              blank: "can't be empty"
-            price:
-              blank: "can't be empty"
-            category:
-              blank: "can't be empty"
-            user:
-              required: "is required"
-        category:
-          attributes:
-            name:
-              blank: "can't be empty"
-        user:
-          attributes:
-            email:
-              blank: "can't be empty"
-              invalid: 'does not have a valid format'
-              taken: 'taken'
-            username:
-              blank: "can't be empty"
-              too_short: "can't be less than 3 characters"
-              too_long: "can't be more than 15 characters"
-              invalid: 'does not have a valid format'
-              taken: 'taken'
-            password:
-              blank: "can't be empty"
-              too_short: "can't be less than 6 characters"
   common:
     action:
       see_more: 'See more...'
       go_back: 'Go back'
     confirm:
       delete: 'Are you sure you want to delete it?'
+      logout: 'Are you sure you want to log out?'
     alert:
       not_logged_in: 'You have to login or create an account'
+  shared:
+    header:
+      products: 'Products list'
+      categories: 'Categories list'
+      login: 'Log in'
+      logout: 'Log out'
+      register: 'Register'
   products:
     product:
       edit: 'Edit'
@@ -116,3 +92,5 @@ en:
       create:
         created: 'Welcome!'
         failed: 'Invalid login!'
+      destroy:
+        destroyed: 'See you later...'

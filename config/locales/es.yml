@@ -6,6 +6,7 @@ es:
     models:
       product: 'Producto'
       category: 'Categoría'
+      user: 'Usuario'
     attributes:
       product:
         title: 'Título'
@@ -19,47 +20,22 @@ es:
         email: 'Correo electrónico'
         username: 'Nombre de usuario'
         password: 'Contraseña'
-    errors:
-      models:
-        product:
-          attributes:
-            title:
-              blank: 'no puede estar vacío'
-            description:
-              blank: 'no puede estar vacío'
-            price:
-              blank: 'no puede estar vacío'
-            category:
-              blank: 'no puede estar vacío'
-            user:
-              required: 'es requerido'
-        category:
-          attributes:
-            name:
-              blank: 'no puede estar vacío'
-        user:
-          attributes:
-            email:
-              blank: 'no puede estar vacío'
-              invalid: 'no tiene un formato válido'
-              taken: 'ocupado'
-            username:
-              blank: 'no puede estar vacío'
-              too_short: 'no puede tener menos de 3 caracteres'
-              too_long: "no puede tener más de 15 caracteres"
-              invalid: 'no tiene un formato válido'
-              taken: 'ocupado'
-            password:
-              blank: 'no puede estar vacío'
-              too_short: 'no puede tener menos de 6 caracteres'
   common:
     action:
       see_more: 'Ver más...'
       go_back: 'Regresar'
     confirm:
       delete: '¿Estás seguro de que quieres eliminarlo?'
+      logout: '¿Estás seguro que quieres cerrar sesión?'
     alert:
       not_logged_in: 'Tienes que iniciar sesión o crear una cuenta.'
+  shared:
+    header:
+      products: 'Lista de productos'
+      categories: 'Lista de categorias'
+      login: 'Iniciar sesión'
+      logout: 'Cerrar sesión'
+      register: 'Registro'
   products:
     product:
       edit: 'Editar'
@@ -114,3 +90,5 @@ es:
       create:
         created: '¡Bienvenido!'
         failed: 'Login inválido'
+      destroy:
+        destroyed: 'Nos vemos luego...'
