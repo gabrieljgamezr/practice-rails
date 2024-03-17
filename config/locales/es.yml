@@ -29,6 +29,7 @@ es:
       logout: '¿Estás seguro que quieres cerrar sesión?'
     alert:
       not_logged_in: 'Tienes que iniciar sesión o crear una cuenta.'
+      not_authorized: 'El usuario no está autorizado'
   shared:
     header:
       products: 'Lista de productos'

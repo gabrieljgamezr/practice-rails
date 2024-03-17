@@ -6,7 +6,7 @@
 %>
 <%=
     link_to t('.categories'),
-    categories_path if Current.user
+    categories_path if Current.user&.admin?
 %>
 <%=
     link_to t('.logout'),

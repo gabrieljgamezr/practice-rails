@@ -22,7 +22,7 @@
 <div class="edit">
     <%=
         link_to t("products.edit.title"),
-        edit_product_path(@product.id) if @product.user == Current.user
+        edit_product_path(@product.id) if @product.owner?
     %>
 </div>
 <div class="delete">
@@ -32,6 +32,6 @@
         data: {
             turbo_method: :delete,
             turbo_confirm: t('common.confirm.delete')
-        } if @product.user == Current.user
+        } if @product.owner?
     %>
 </div>
