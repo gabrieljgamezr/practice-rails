@@ -35,3 +35,6 @@
         } if @product.owner?
     %>
 </div>
+<div>
+    <%= link_to t('.view_more_products', username: @product.user.username), user_path(@product.user.username) %>
+</div>

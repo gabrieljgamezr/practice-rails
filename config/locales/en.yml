@@ -30,6 +30,7 @@ en:
     alert:
       not_logged_in: 'You have to login or create an account'
       not_authorized: 'The user is not authorized'
+      not_found: 'It has not been found'
   shared:
     header:
       products: 'Products list'
@@ -53,6 +54,7 @@ en:
       cheapest: 'cheapest'
     show:
       title: 'Product details'
+      view_more_products: 'View more products by %{username}'
     edit:
       title: 'Edit product'
     update:

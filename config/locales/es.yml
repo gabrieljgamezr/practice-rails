@@ -30,6 +30,7 @@ es:
     alert:
       not_logged_in: 'Tienes que iniciar sesión o crear una cuenta.'
       not_authorized: 'El usuario no está autorizado'
+      not_found: 'No se ha encontrado'
   shared:
     header:
       products: 'Lista de productos'
@@ -53,6 +54,7 @@ es:
       cheapest: 'Más barato'
     show:
       title: 'Detalles del producto'
+      view_more_products: 'Ver más productos de %{username}'
     edit:
       title: 'Editar producto'
     update:
@@ -87,6 +89,8 @@ es:
     users:
       new:
         title: 'Añadir usuario'
+      create:
+        created: 'Usuario creado exitosamente'
     sessions:
       create:
         created: '¡Bienvenido!'
